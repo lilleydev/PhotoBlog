@@ -2,6 +2,8 @@ class User < ApplicationRecord
   # rolify
   resourcify
   include Authority::Abilities
+  has_many :posts
+  has_many :roles, through: :user_roles
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,

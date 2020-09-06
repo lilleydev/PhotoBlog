@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
   resourcify
-  belongs_to :author, class_name: 'User'
+  belongs_to :user
   include Authority::Abilities
 end
